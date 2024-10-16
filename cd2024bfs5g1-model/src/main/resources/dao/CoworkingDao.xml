@@ -4,10 +4,10 @@
                  xsi:schemaLocation="http://www.ontimize.com/schema/jdbc http://www.ontimize.com/schema/jdbc/ontimize-jdbc-dao.xsd"
                  catalog="" schema="${mainschema}" table="coworking" datasource="mainDataSource" sqlhandler="dbSQLStatementHandler">
     <DeleteKeys>
-        <Column>id</Column>
+        <Column>cw_id</Column>
     </DeleteKeys>
     <UpdateKeys>
-        <Column>id</Column>
+        <Column>cw_id</Column>
     </UpdateKeys>
-    <GeneratedKey>id</GeneratedKey>
+    <GeneratedKey>cw_id</GeneratedKey>
 </JdbcEntitySetup>

@@ -77,10 +77,16 @@
   "VERSION": "Version",
   "VIEW": "Views",
   "COWORKING_DATA_SECTION" : "Coworking Details",
+  
   "NAME": "Name",
   "DESCRIPTION": "Description",
   "ADDRESS": "Address",
-  "LOCATION": "Locarion",
+  "LOCATION": "Location",
   "CAPACITY": "Capacity",
-  "DAILY_PRICE": "Daily price"
+  "DAILY_PRICE": "Daily price",
+  
+  "ADD COWORKING":"Add Coworking",
+  "START_DATE":"Start Date",
+  "END_DATE":"End Date"
+
 }

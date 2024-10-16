@@ -82,5 +82,8 @@
   "ADDRESS": "Dirección",
   "LOCATION": "Localidad",
   "CAPACITY": "Capacidad",
-  "DAILY_PRICE": "Precio diario"
+  "DAILY_PRICE": "Precio diario",
+  "ADD COWORKING":"Añadir Coworking",
+  "START_DATE":"Fecha de Inicio",
+  "END_DATE":"Fecha de Final"
 }

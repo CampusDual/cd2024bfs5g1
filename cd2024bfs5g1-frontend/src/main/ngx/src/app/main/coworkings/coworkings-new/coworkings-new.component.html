@@ -1,0 +1,68 @@
+  <!--
+
+    Este archivo HTML define un formulario para añadir un nuevo espacio de coworking. El formulario está estructurado utilizando componentes de Angular y Flex Layout para un diseño responsivo.
+
+    Detalles del Formulario:
+    - Atributos del Formulario:
+      - class: "form-section"
+      - attr: "coworkingDetail"
+      - service: "coworkings"
+      - entity: "coworking"
+      - keys: "id"
+      - header-actions: "new"
+      - show-header-navigation: "no"
+      - (onInsert): "onInsertSuccess()"
+      - after-insert-mode: "detail"
+
+    - Secciones del Formulario:
+      - Información General:
+        - Nombre: Campo de texto requerido con icono "business"
+        - Descripción: Campo de texto requerido con icono "description" y un máximo de 250 caracteres
+
+      - Dirección y Localidad:
+        - Localidad: Campo de texto requerido con icono "location_city"
+        - Dirección: Campo de texto requerido con icono "place"
+
+      - Capacidad y Precio Diario:
+        - Capacidad: Campo de número entero requerido con icono "event_seat" y color de hover personalizado
+        - Precio Diario: Campo de número real requerido con icono "euro_symbol", 2 dígitos decimales, y color de hover personalizado
+
+      - Fecha de Inicio y Fecha Límite:
+        - Fecha de Inicio: Campo de fecha requerido con icono "event"
+        - Fecha Límite: Campo de fecha requerido con icono "event_busy"
+  -->
+  <o-form class="form-section" #coworkingForm attr="coworkingDetail" service="coworkings" entity="coworking" keys="id" header-actions="new" show-header-navigation="no" (onInsert)="onInsertSuccess()" after-insert-mode="detail">
+
+  <div class="form-section" fxLayout="row" fxLayoutGap="24px" fxLayoutAlign="center start" class="form-container">
+
+    <!-- Información General -->
+    <o-column fxFlex="70" class="form-section" flFlex title="ADD_COWORKING">
+
+      <!-- Nombre y -->
+      <div fxLayout="row" fxLayoutGap="24px" class="form-row">
+        <o-text-input fxFlex="50" attr="cw_name" fxFlex label="NAME" required="yes" icon="business" placeholder="Nombre del coworking"></o-text-input>
+        <o-text-input fxFlex="50" attr="cw_description" fxFlex label="DESCRIPTION" required="yes" maxlength="250" icon="description" placeholder="Describe tu coworking"></o-text-input>
+      </div>
+
+      <!-- Dirección y Localidad -->
+      <div fxLayout="row" fxLayoutGap="24px" class="form-row">
+        <o-text-input fxFlex="50" attr="cw_location" fxFlex label="LOCATION" required="yes" icon="location_city" placeholder="Ubicación"></o-text-input>
+        <o-text-input fxFlex="50" attr="cw_address" fxFlex label="ADDRESS" required="yes" icon="place" placeholder="Dirección completa"></o-text-input>
+      </div>
+
+      <!-- Capacidad y Precio Diario -->
+      <div fxLayout="row" fxLayoutGap="24px" class="form-row">
+        <o-integer-input fxFlex="50" attr="cw_capacity" fxFlex label="CAPACITY" required="yes" icon="event_seat" placeholder="Ej. 10, 20" style="--field-hover-color: #6200ea;"></o-integer-input>
+        <o-real-input fxFlex="50" attr="cw_daily_price" fxFlex label="DAILY_PRICE" required="yes" decimal-digits="2" icon="euro_symbol" placeholder="Ej. 20, 50" style="--field-hover-color: #6200ea;"></o-real-input>
+      </div>
+
+      <!-- Fecha de Inicio y Fecha Límite -->
+      <div fxLayout="row" fxLayoutGap="24px" class="form-row">
+        <o-date-input fxFlex="50" attr="cw_start_date" fxFlex label="START_DATE" required="yes" icon="event" placeholder="Seleccione una fecha"></o-date-input>
+        <o-date-input fxFlex="50" attr="cw_end_date" fxFlex label="END_DATE" required="yes" icon="event_busy" placeholder="Seleccione una fecha"></o-date-input>
+      </div>
+
+    </o-column>
+  </div>
+
+</o-form>

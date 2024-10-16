@@ -1,0 +1,130 @@
+openapi: 3.0.0
+info:
+  title: Coworking API
+  description: API para gestionar espacios de coworking.
+  version: 1.0.0
+
+paths:
+  /coworkings:
+    post:
+      summary: Crear un nuevo espacio de coworking.
+      operationId: createCoworking
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Coworking'
+      responses:
+        '200':
+          description: Coworking creado con éxito.
+        '500':
+          description: Error al crear el coworking.
+
+    get:
+      summary: Obtener la lista de todos los coworkings.
+      operationId: getCoworkings
+      responses:
+        '200':
+          description: Lista de coworkings.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Coworking'
+
+  /coworkings/{id}:
+    get:
+      summary: Obtener un coworking por ID.
+      operationId: getCoworkingById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Información del coworking.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Coworking'
+        '404':
+          description: Coworking no encontrado.
+
+    put:
+      summary: Actualizar un coworking.
+      operationId: updateCoworking
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Coworking'
+      responses:
+        '200':
+          description: Coworking actualizado con éxito.
+        '404':
+          description: Coworking no encontrado.
+
+    delete:
+      summary: Eliminar un coworking.
+      operationId: deleteCoworking
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Coworking eliminado con éxito.
+        '404':
+          description: Coworking no encontrado.
+
+components:
+  schemas:
+    Coworking:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: ID del coworking.
+        name:
+          type: string
+          description: Nombre del coworking.
+        description:
+          type: string
+          description: Descripción del coworking.
+        address:
+          type: string
+          description: Dirección del coworking.
+        location:
+          type: string
+          description: Localidad del coworking.
+        capacity:
+          type: integer
+          description: Capacidad del coworking.
+        daily_price:
+          type: number
+          format: float
+          description: Precio por día.
+        user_id:
+          type: integer
+          description: ID del usuario asociado.
+        start_date:
+          type: string
+          format: date
+          description: Fecha de inicio.
+        end_date:
+          type: string
+          format: date
+          description: Fecha límite.

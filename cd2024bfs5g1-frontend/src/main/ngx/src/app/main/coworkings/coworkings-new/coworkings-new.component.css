@@ -1,0 +1,103 @@
+/*
+  Archivo: /c:/Users/34692/IdeaProjects/cd2024bfs5g1/cd2024bfs5g1-frontend/src/main/ngx/src/app/main/coworkings/coworkings-new/coworkings-new.component.css
+
+  Estilos para el componente coworkings-new.
+
+  .form-container:
+    - Añade padding y color de fondo al contenedor del formulario.
+
+  .form-section:
+    - Estiliza la sección del formulario con border-radius, color de fondo, padding, sombra y efectos de transición.
+    - Al pasar el cursor, aplica una transformación y cambia la sombra para un efecto de elevación.
+
+  .form-row:
+    - Añade margen en la parte inferior de las filas del formulario.
+
+  o-text-input, o-integer-input, o-real-input, o-date-input:
+    - Establece la posición, display y ancho para varios tipos de entrada.
+
+  o-text-input[icon], o-integer-input[icon], o-real-input[icon], o-date-input[icon]:
+    - Añade padding, tamaño de fuente, color de fondo, borde, border-radius y efectos de transición a las entradas con iconos.
+    - Al pasar el cursor, cambia el color del borde.
+
+  o-text-input[icon]::before, o-integer-input[icon]::before, o-real-input[icon]::before, o-date-input[icon]::before:
+    - Usa la fuente 'Material Icons' para mostrar iconos antes de los campos de entrada.
+    - Posiciona los iconos y estiliza su apariencia.
+
+  o-text-input input:focus, o-integer-input input:focus, o-real-input input:focus, o-date-input input:focus:
+    - Aplica estilos de enfoque a los campos de entrada, incluyendo color del borde y sombra.
+
+  o-text-input input::placeholder, o-integer-input input::placeholder, o-real-input input::placeholder, o-date-input input::placeholder:
+    - Estiliza el texto del placeholder para los campos de entrada.
+
+  .form-section o-text-input:hover, .form-section o-integer-input:hover, .form-section o-real-input:hover, .form-section o-date-input:hover:
+    - Cambia el color de fondo de los campos de entrada al pasar el cursor dentro de la sección del formulario.
+*/
+  .form-container {
+    padding: 40px;
+    background: #f5f5f5;
+  }
+ 
+  .form-section {
+    border-radius: 12px;
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+ 
+  .form-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.15);
+  }
+ 
+  .form-row {
+    margin-bottom: 24px;
+  }
+ 
+  o-text-input, o-integer-input, o-real-input, o-date-input {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+ 
+  o-text-input[icon], o-integer-input[icon], o-real-input[icon], o-date-input[icon] {
+    padding-left: 40px;
+    font-size: 16px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+ 
+  o-text-input[icon]:hover, o-integer-input[icon]:hover, o-real-input[icon]:hover, o-date-input[icon]:hover {
+    border-color: var(--field-hover-color, #6200ea);
+  }
+ 
+  o-text-input[icon]::before, o-integer-input[icon]::before, o-real-input[icon]::before, o-date-input[icon]::before {
+    content: attr(icon);
+    font-family: 'Material Icons';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9e9e9e;
+    font-size: 20px;
+  }
+ 
+  /* Animaciones suaves */
+  o-text-input input:focus, o-integer-input input:focus, o-real-input input:focus, o-date-input input:focus {
+    border-color: #6200ea;
+    box-shadow: 0px 0px 8px rgba(98, 0, 234, 0.3);
+  }
+ 
+  o-text-input input::placeholder, o-integer-input input::placeholder, o-real-input input::placeholder, o-date-input input::placeholder {
+    color: #9e9e9e;
+    opacity: 0.8;
+  }
+ 
+  /* Botones e interacción */
+  .form-section o-text-input:hover, .form-section o-integer-input:hover, .form-section o-real-input:hover, .form-section o-date-input:hover {
+    background-color: #f0f0f0;
+  }
+ 
