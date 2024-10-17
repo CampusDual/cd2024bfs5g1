@@ -101,5 +101,7 @@
   "locality": "Localidad",
   "bookings": "Plazas",
   "description": "Descripción",
-  "NEW_EVENT": "Crear evento"
+  "NEW_EVENT": "Crear evento",
+  "REGISTER": "Registrar",
+  "REGISTER_TITLE": "Rellena tus datos para registrarte"
 }

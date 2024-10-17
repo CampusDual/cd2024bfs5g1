@@ -49,4 +49,7 @@ export class UserInfoService {
       localStorage.setItem(this._localStorageKey, JSON.stringify(stored));
 
   }
+
+
+  
 }

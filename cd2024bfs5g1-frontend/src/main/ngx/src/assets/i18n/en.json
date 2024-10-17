@@ -101,5 +101,7 @@
   "locality": "Locality",
   "bookings": "Bookings",
   "description": "Description",
-  "NEW_EVENT": "New event"
+  "NEW_EVENT": "New event",
+  "REGISTER": "Register",
+  "REGISTER_TITLE": "Fill in your details to register"
 }

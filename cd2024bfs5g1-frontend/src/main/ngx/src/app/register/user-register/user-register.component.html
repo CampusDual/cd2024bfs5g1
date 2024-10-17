@@ -1,0 +1,27 @@
+<div class="full-page">
+  <div class="register-outer-container">
+    <div class="register-bg-container"></div>
+
+    <div class="wrapp-register">
+      <div fxFill fxLayout="column" fxLayoutAlign="center center" class="register-inner-container" >
+
+        <o-form #registerForm (onInsert)="logUser()" (onBeforeInsert)="disableHeader()" attr="userRegister" service="users" entity="user" keys="usr_id" header-actions="I" show-header-navigation="no">
+          <o-column fxFlex title="REGISTER_USER">
+            <o-text-input #nameInput attr="usr_login" label="Name" data="" (onBlur)="checkUserName()"></o-text-input>
+            <o-email-input #emailInput attr="usr_email" label="Email" data="" read-only="no" required="yes" (onBlur)="checkEmail()"></o-email-input>
+            <o-password-input #passInput attr="usr_password" label="Password" data="" read-only="no" required="yes"></o-password-input>
+            <o-password-input #passInput2 attr="usr_password2" label="Password Confirm" data="" read-only="no" required="yes"></o-password-input>
+          </o-column>
+        </o-form>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer" class="footer-container">
+    <div fxLayout="row" fxLayoutAlign="end center">
+      <span>{{ "FOOTER_CREATED_BY" | oTranslate }}</span>
+      <span> &copy; 2024 </span>
+      <span>{{ "FOOTER_RIGHTS" | oTranslate }}</span>
+    </div>
+  </div>
+</div>
