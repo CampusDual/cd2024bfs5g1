@@ -1,7 +1,7 @@
 <div class="grid-container">
   <o-grid #coworkingsGrid attr="coworkingsGrid" title="COWORKINGS" service="coworkings" entity="coworking" keys="cw_id"
     columns="cw_id;cw_name;cw_location;cw_daily_price;cw_description" quick-filter-columns="cw_name;cw_description"
-    pagination-controls="true" show-page-size="yes" page-size-options="12;16;20" query-rows="12">
+    pagination-controls="true" page-size-options="12;16;20" query-rows="12">
     <o-grid-item *ngFor="let data of coworkingsGrid.dataArray">
       <div class="card" fxLayout="column" fxLayoutAlign="space-evenly center">
         <div class="name">
