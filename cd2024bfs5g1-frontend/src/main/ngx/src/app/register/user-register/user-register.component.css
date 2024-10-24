@@ -1,73 +1,117 @@
 .m-top-24 {
-    margin-top: 24px;
-  }
-  
+  margin-top: 24px;
+}
+
 .full-page {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 
-    .register-outer-container {
-        width: 100%;
-        height: 100%;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
-        overflow: auto;
-    }
-    .register-bg-container {
-        background-image: url('^assets/images/login_bg.png');
-        width: calc(100% - 640px);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        z-index: 1;
-    }
-  
-      .register-bg-container::before {
-        content: "";
-        display: block;
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: rgba(0, 0, 0, .1);
-        opacity: .8;
+  .register-outer-container {
+      width: 100%;
+      height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      overflow: auto;
+  }
+
+  .register-bg-container {
+      background-image: url('^assets/images/login_bg.png');
+      width: calc(100% - 640px);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      z-index: 1;
+  }
+
+  .register-bg-container::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .1);
+      opacity: .8;
+  }
+
+  .wrapp-register {
+      width: 640px;
+      min-height: 100%;
+
+      .register-inner-container {
+          width: 100%;
       }
-      .wrapp-register {
-        width: 640px;
-        min-height: 100%;
 
-        .register-inner-container{
-            width: 100%;
-        }
-        form {
-            padding: 16px;
-            min-height: 600px;
-            min-width: 368px;
+      form {
+          padding: 18px;
+          min-height: 800px;
+          min-width: 368px;
+          justify-content: center;
+
+          /* Añadir espacio entre los elementos del formulario */
+          label {
+              display: block;
+              margin-bottom: 4px;  /* Espacio entre la etiqueta y el campo de texto */
           }
 
+          input, select, textarea {
+              display: block;
+              width: 100%;
+              margin-bottom: 5px;  /* Espacio entre los campos de texto */
+              padding: 5px;        /* Aumentar el relleno dentro del campo */
+          }
+
+          /* Espaciado adicional para los textos */
+          p, .form-text {
+              margin-bottom: 8px;  /* Añade espacio entre párrafos de texto */
+          }
+
+          .m-top-24 {
+              margin-top: 24px;     /* Añadir espacio superior */
+          }
+
+          button {
+              margin-top: 14px;     /* Espacio adicional antes del botón */
+              padding: 10px 20px;   /* Tamaño del botón */
+          }
+          .text-center {
+            display: flex;           
+            justify-content: center; 
+            align-items: center;     
+            height: 100%;            
+        }
+          .link-text {
+            color: blue;          /* Color del texto del enlace */
+            text-decoration: underline; 
+            cursor: pointer;      
+        }
+        
+        .link-text:hover {
+            color: rgb(15, 163, 72);      /* Cambia el color al pasar el cursor sobre el enlace */
+        }
       }
+  }
 }
 
 @media(max-width:576px) {
-    .full-page {
+  .full-page {
 
       .footer-container {
-        div {
-          margin: 0 auto;
-          place-content: center !important;
-        }
+          div {
+              margin: 0 auto;
+              place-content: center !important;
+          }
       }
-    }
   }
-  
+}

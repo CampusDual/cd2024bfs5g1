@@ -116,6 +116,10 @@ public class UserAndRoleService implements IUserAndRoleService {
 	@Override
 	@Transactional(rollbackFor = Throwable.class)
 	public EntityResult userInsert(final Map<?, ?> keysValues) throws OntimizeJEERuntimeException {
+
+		if (keysValues.get("companyCheck").toString().equals("false")){
+			keysValues.remove("usr_cif");
+		}
 		EntityResult userResult = this.daoHelper.insert(this.userDao, this.encryptPassword(keysValues));
 		Map<String, Object> roleUser = new HashMap<>();
 		roleUser.put(UserRoleDao.USR_ID, userResult.get(UserDao.USR_ID));

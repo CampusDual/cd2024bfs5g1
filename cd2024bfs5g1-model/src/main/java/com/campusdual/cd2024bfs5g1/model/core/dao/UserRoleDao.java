@@ -20,4 +20,5 @@ public class UserRoleDao extends OntimizeJdbcDaoSupport {
 	public static final String ACTIVED         = "actived";
 	public static final String USER_ROLE_ID    = "2";
 	public static final String COMPANY_ROLE_ID = "3";
+
 }

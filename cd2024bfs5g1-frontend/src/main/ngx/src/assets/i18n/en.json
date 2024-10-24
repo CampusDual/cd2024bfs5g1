@@ -20,7 +20,7 @@
   "EXAMPLE_LOGIN_INFO": "Use this user and password for login",
   "FILTER_PROFILES": "Filter the roles",
   "FILTER_USERS": "Filter users:",
-  "FOOTER_CREATED_BY": "Developed by Imatia Innovation",
+  "FOOTER_CREATED_BY": "WorkWander",
   "FOOTER_RIGHTS": "All rights reserved",
   "FORGOT_MY_PASSWORD": "I forgot my password",
   "HOME": "Home",
@@ -116,5 +116,6 @@
   "COWORKINGS_DESCRIPTION": "Coworking's description",
   "COWORKINGS_UBICATION": "Ubication",
   "COMPANYCB": "I`m a company",
-  "COWORKINGS_ADDRESS": "Full address"
+  "COWORKINGS_ADDRESS": "Full address", 
+  "CIF_COMPANY": "Enter your CIF"
 }

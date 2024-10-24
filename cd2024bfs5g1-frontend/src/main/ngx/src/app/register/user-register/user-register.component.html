@@ -3,14 +3,24 @@
     <div class="register-bg-container"></div>
 
     <div class="wrapp-register">
-      <div fxFill fxLayout="column" fxLayoutAlign="center center" class="register-inner-container" >
-        <o-form #registerForm (onInsert)="logUser()" (onBeforeInsert)="disableHeader()" attr="userRegister" service="users" entity="user" keys="usr_id" header-actions="I" show-header-navigation="no">
+      <div fxFill fxLayout="column" fxLayoutAlign="center center" class="register-inner-container">
+        <o-form #registerForm fxLayoutAlign="center" (onBeforeInsert)="disableButton()" (onInsert)="logUser()"
+          show-header="no" attr="userRegister" service="users" entity="user" keys="usr_id">
           <o-column fxFlex appearance="outline"> {{"REGISTER_TITLE" | oTranslate }}
             <div fxLayout="column" fxLayoutGap="10px">
-              <o-text-input #nameInput attr="usr_login" label="{{ 'NAME' | oTranslate }}" data="" (onBlur)="checkUserName()"></o-text-input>
-              <o-email-input #emailInput attr="usr_email" label="{{ 'usr_email' | oTranslate }}" data="" read-only="no" required="yes" (onBlur)="checkEmail()"></o-email-input>
-              <o-password-input #passInput attr="usr_password" label="{{ 'PASSWORD' | oTranslate }}" data="" read-only="no" required="yes"></o-password-input>
-              <o-checkbox attr="companyCheck" label="{{ 'COMPANYCB' | oTranslate }}"></o-checkbox>
+              <o-text-input #nameInput attr="usr_login" label="{{ 'NAME' | oTranslate }}" data=""
+                (onBlur)="checkUserName()"></o-text-input>
+              <o-email-input #emailInput attr="usr_email" label="{{ 'usr_email' | oTranslate }}" data="" read-only="no"
+                required="yes" (onBlur)="checkEmail()"></o-email-input>
+              <o-password-input #passInput attr="usr_password" label="{{ 'PASSWORD' | oTranslate }}" data=""
+                read-only="no" required="yes"></o-password-input>
+              <o-text-input *ngIf="checkCompany()" #companyInput attr="usr_cif" required="yes"
+                label="{{ 'CIF_COMPANY' | oTranslate }}" (onBlur)="checkCif()"></o-text-input>
+              <o-checkbox #checkBoxCompany attr="companyCheck" label="{{ 'COMPANYCB' | oTranslate }}"></o-checkbox>
+              <button #submitButton type="submit" (click)="registerForm.insert()">Registrar</button>
+              <div class="text-center">
+                <a href="#" (click)="goBack(); $event.preventDefault();" class="link-text">I'm registered</a>
+              </div>
             </div>
           </o-column>
         </o-form>
@@ -18,11 +28,13 @@
     </div>
   </div>
 
-  <div id="footer" class="footer-container">
-    <div fxLayout="row" fxLayoutAlign="end center">
-      <span>{{ "FOOTER_CREATED_BY" | oTranslate }}</span>
-      <span> &copy; 2024 </span>
-      <span>{{ "FOOTER_RIGHTS" | oTranslate }}</span>
-    </div>
+
+</div>
+
+<div id="footer" class="footer-container">
+  <div fxLayout="row" fxLayoutAlign="end center">
+    <span>{{ "FOOTER_CREATED_BY" | oTranslate }}</span>
+    <span> &copy; 2024 </span>
+    <span>{{ "FOOTER_RIGHTS" | oTranslate }}</span>
   </div>
 </div>

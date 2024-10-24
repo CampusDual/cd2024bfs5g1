@@ -117,5 +117,6 @@
   "COWORKINGS_UBICATION": "Ubicación",
   "COWORKINGS_ADDRESS": "Dirección completa",
   "REGISTER_TITLE": "Rellena tus datos para registrarte",
-  "COMPANYCB": "Soy una empresa"
+  "COMPANYCB": "Soy una empresa", 
+  "CIF_COMPANY": "Introduzca su CIF"
 }
