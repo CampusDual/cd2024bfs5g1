@@ -235,5 +235,6 @@
   "DELETE_COWORKING": "Delete",
   "SURE_DELETE": "Are you sure you want to delete the coworking ",
   "COWORKING_DELETED": "Coworking deleted",
-  "PENDING_BOOKINGS": "You can't remove this coworking, it has pending bookings"
+  "PENDING_BOOKINGS": "You can't remove this coworking, it has pending bookings",
+  "EVENT_CREATE": "Event created!"
 }

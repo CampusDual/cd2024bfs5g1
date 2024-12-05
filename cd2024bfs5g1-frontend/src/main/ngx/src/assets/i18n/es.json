@@ -235,5 +235,6 @@
   "DELETE_COWORKING": "Borrado",
   "SURE_DELETE": "¿Estás seguro de querer borrar el coworking ",
   "COWORKING_DELETED": "Coworking borrado",
-  "PENDING_BOOKINGS": "No puedes eliminar este coworking, tiene reservas pendientes"
+  "PENDING_BOOKINGS": "No puedes eliminar este coworking, tiene reservas pendientes",
+  "EVENT_CREATE": "¡Evento creado!"
 }
