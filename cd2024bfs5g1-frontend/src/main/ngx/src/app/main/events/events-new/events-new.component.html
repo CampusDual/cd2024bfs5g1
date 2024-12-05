@@ -26,9 +26,10 @@ This HTML file defines the structure of the "New Event" form component in an Ang
   class="form-section"
   ignore-default-navigation="yes"
   fxFlex
+  c
 >
   <div
-    class="form-section form-new-event"
+    class="form-section form-new-event no-margin-top"
     fxLayout="row"
     fxLayoutGap="24px"
     fxLayoutAlign="left start"
@@ -91,6 +92,7 @@ This HTML file defines the structure of the "New Event" form component in an Ang
         max="999"
       ></o-integer-input>
       <!-- Localidad -->
+
       <o-combo
         #combo
         attr="locality"
@@ -107,10 +109,16 @@ This HTML file defines the structure of the "New Event" form component in an Ang
         searchable="true"
         sort="ASC"
         appearance="fill"
+        class="halfSize"
       >
       </o-combo>
       <!-- Dirección -->
-      <o-text-input attr="address" icon="place" required="yes"></o-text-input>
+      <o-text-input
+        attr="address"
+        icon="place"
+        required="yes"
+        class="halfSize"
+      ></o-text-input>
 
       <o-real-input
         attr="price"
@@ -120,12 +128,22 @@ This HTML file defines the structure of the "New Event" form component in an Ang
         placeholder="0"
         decimal-digits="2"
       ></o-real-input>
-
+    </o-column>
+    <o-column
+      fxFlex
+      class="form-section form-new-event"
+      title=""
+      fxLayoutGap="24px"
+      style="padding: 0 15px"
+      fxLayoutAlign="space-between center"
+      class="image"
+    >
       <!-- Imagen -->
       <o-image
         attr="image_event"
         sql-type="OTHER"
         max-file-size="1048576"
+        height="350px"
       ></o-image>
       <div fxLayout="row" fxLayoutGap="24px" class="form-row" fxFlex>
         <div class="buttons">
