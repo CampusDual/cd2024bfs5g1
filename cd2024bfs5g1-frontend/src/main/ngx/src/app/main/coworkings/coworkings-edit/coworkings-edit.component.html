@@ -118,36 +118,30 @@
             <o-column
               id="{{ 'sel' + dato.srv_id }}"
               class="serviceDisable service-column"
-              fxFlex="65px"
+              fxFlex="100px"
             >
               <article *ngIf="dato.srv_name == 'additional_screen'">
-                <mat-icon [matTooltip]="dato.srv_name | oTranslate"
-                  >desktop_windows</mat-icon
+                <mat-icon>desktop_windows</mat-icon
                 >
               </article>
               <article *ngIf="dato.srv_name == 'vending_machine'">
-                <mat-icon [matTooltip]="dato.srv_name | oTranslate"
-                  >kitchen</mat-icon
+                <mat-icon>kitchen</mat-icon
                 >
               </article>
               <article *ngIf="dato.srv_name == 'coffee_bar'">
-                <mat-icon [matTooltip]="dato.srv_name | oTranslate"
-                  >local_cafe</mat-icon
+                <mat-icon>local_cafe</mat-icon
                 >
               </article>
               <article *ngIf="dato.srv_name == 'water_dispenser'">
-                <mat-icon [matTooltip]="dato.srv_name | oTranslate"
-                  >local_drink</mat-icon
+                <mat-icon>local_drink</mat-icon
                 >
               </article>
               <article *ngIf="dato.srv_name == 'ergonomic_chair'">
-                <mat-icon [matTooltip]="dato.srv_name | oTranslate"
-                  >event_seat</mat-icon
+                <mat-icon>event_seat</mat-icon
                 >
               </article>
               <article *ngIf="dato.srv_name == 'parking'">
-                <mat-icon [matTooltip]="dato.srv_name | oTranslate"
-                  >local_parking</mat-icon
+                <mat-icon>local_parking</mat-icon
                 >
               </article>
               <span class="icon-literal">{{ dato.srv_name | oTranslate }}</span>

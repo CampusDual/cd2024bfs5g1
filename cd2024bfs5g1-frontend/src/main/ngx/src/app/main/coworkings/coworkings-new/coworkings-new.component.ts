@@ -1,5 +1,4 @@
 import { HttpClient } from '@angular/common/http';
-import { Location } from "@angular/common";
 import { Component, Injector, OnInit, ViewChild } from "@angular/core";
 import { Router } from "@angular/router";
 import {
@@ -90,15 +89,16 @@ export class CoworkingsNewComponent implements OnInit {
 
   public appendService(id: number, serv: string): void {
     this.arrayServices.push({ id: id });
-    document.getElementById(serv).style.backgroundColor = "#e6d5c3";
-    document.getElementById(serv).style.color = "black;";
+    document.getElementById(serv).style.backgroundColor = "#b9cebf";
+    document.getElementById(serv).style.color = "black";
+    document.getElementById(serv).style.borderRadius = "6px";
     this.selectedServices++;
     this.availableServices--;
   }
 
   public deleteService(index: number, id: number, serv: string): void {
     this.arrayServices.splice(index, 1)
-    document.getElementById(serv).style.backgroundColor = "whitesmoke";
+    document.getElementById(serv).style.backgroundColor = "#e9e9e9";
     document.getElementById(serv).style.color = "black";
     this.selectedServices--;
     this.availableServices++;

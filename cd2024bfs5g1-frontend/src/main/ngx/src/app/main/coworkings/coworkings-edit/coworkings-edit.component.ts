@@ -106,14 +106,15 @@ export class CoworkingsEditComponent {
 
   public appendService(id: number, serv: string): void {
     this.arrayServices.push({ id: id });
-    document.getElementById(serv).style.backgroundColor = "#e6d5c3";
-    document.getElementById(serv).style.color = "black;";
+    document.getElementById(serv).style.backgroundColor = "#b9cebf";
+    document.getElementById(serv).style.color = "black";
+    document.getElementById(serv).style.borderRadius = "6px";
     this.selectedServices++;
   }
 
   public deleteService(index: number, id: number, serv: string): void {
     this.arrayServices.splice(index, 1)
-    document.getElementById(serv).style.backgroundColor = "whitesmoke";
+    document.getElementById(serv).style.backgroundColor = "#ffffff";
     document.getElementById(serv).style.color = "black";
     this.selectedServices--;
   }
@@ -190,7 +191,7 @@ export class CoworkingsEditComponent {
         .subscribe((resp) => {
           //Obtenemos resp (respuesta) del servidor, y recorremos el array de servicios (data)
           for (let index = 0; index < resp.data.length; index++) {
-            document.getElementById('sel' + resp.data[index]['id']).style.backgroundColor = "#e6d5c3";
+            document.getElementById('sel' + resp.data[index]['id']).style.backgroundColor = "#b9cebf";
             //Guardamos el id que devuelve data situado en esa posición del array
             let obj = resp.data[index]['id'];
             this.arrayServices.push({ id: obj }); //Con el valor, creamos un objeto y lo guardamos en el array de servicios
