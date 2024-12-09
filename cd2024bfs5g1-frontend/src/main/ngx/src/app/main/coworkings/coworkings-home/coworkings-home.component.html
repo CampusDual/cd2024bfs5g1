@@ -66,8 +66,27 @@
           fxFlex.gt-xs="37"
           fxFlex.gt-sm="18"
         ></o-daterange-input>
+        <div class="price_range">
+          <span>{{ "PRICE_RANGE" | oTranslate }}</span><br>
+          <span >&nbsp;0 € - {{ toPrice }}&nbsp;€</span>
+        </div>
+        <div class="slider">
+          <o-slider
+          id="slider"
+          #cw_daily_price
+          attr="cw_daily_price"
+          read-only="no"
+          max="99.00"
+          (onChange)="click($event)"
+          min="0.00"
+          label="PRICE_SLIDER"
+          [tooltip]="formatLabelUntil()"
+          tooltip-position="below"
+          step="5"
+        ></o-slider>
+        </div>
         <o-row class="btn-container" layout-gap="10px">
-          <button
+          <button class="button-filter"
             attr="filter"
             [oFilterBuilderQuery]="filterBuilder"
             query-on-change="true"
@@ -78,7 +97,7 @@
           >
             <mat-icon class="material-icons">search</mat-icon>
           </button>
-          <button
+          <button class="button-filter"
             attr="clear"
             [oFilterBuilderClear]="filterBuilder"
             type="RAISED"
@@ -94,7 +113,7 @@
         <o-filter-builder
           #filterBuilder
           attr="thefilter"
-          filters="cw_location:city;services:srv_name;date:daterange"
+          filters="cw_location:city;services:srv_name;date:daterange;cw_daily_price:cw_daily_price"
           [target]="coworkingsGrid"
           query-on-change="no"
           query-on-change-delay="500"

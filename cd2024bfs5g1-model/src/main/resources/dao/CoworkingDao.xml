@@ -106,6 +106,7 @@
                     cw.cw_id AS cw_id,
                     cw.cw_name AS cw_name,
                     cw.cw_capacity AS cw_capacity,
+                    cw.cw_daily_price as cw_daily_price,
                     public.city.city AS cw_location,
                     STRING_AGG(service.srv_name, ',') AS services
                 FROM coworking cw
