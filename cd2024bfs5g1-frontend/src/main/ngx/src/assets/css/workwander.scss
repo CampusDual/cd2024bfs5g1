@@ -371,14 +371,29 @@ nav.ng-star-inserted:nth-last-child(2) {
         border-radius: $borderRadiusNav;
         background-color: $accent;
         color: $primary;
-        border-left: 8px solid $primary;
+        border-left: 8px solid $verdeBoton;
+      }
+
+      a.o-app-sidenav-viewer-sidenav-item-selected {
+        color: rgba(0, 0, 0, 0.74);
+        background-color: $accent;
+        border-left: 8px solid $verdeBoton;
       }
     }
     .mat-drawer.o-app-sidenav-sidenav .mat-drawer-inner-container {
       padding-bottom: 0px !important;
     }
   }
+
+  o-app-sidenav-image.o-app-sidenav-image {
+    background-color: $primary;
+  }
+
+  .sidenav-toggle-container.ng-star-inserted {
+    background-color: $primary;
+  }
 }
+
 .o-data-toolbar.o-data-toolbar.o-grid-toolbar.ng-star-inserted {
   background-color: $blanco;
   padding: 25px 25px 25px 0;
@@ -650,6 +665,7 @@ o-column {
       width: 100%;
       min-width: 100%;
     }
+
     .o-image .o-image-content .o-image-display-container.o-image-drag-and-drop {
       padding: 10px;
     }
@@ -1039,8 +1055,16 @@ o-data-toolbar {
   background: transparent !important;
 }
 
-.column-events-details {
-  max-width: 480px;
+.events-details {
+  margin-top: 50px !important;
+
+  .column-events-details {
+    max-width: 480px;
+  }
+
+  .detalles {
+    max-width: 480px;
+  }
 }
 
 .o-grid-no-results {

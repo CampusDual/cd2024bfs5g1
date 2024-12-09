@@ -48,12 +48,22 @@
         "enabled": false
       },
       {
-        "attr":"analytics",
+        "attr": "analytics",
         "visible": false,
         "enabled": false
       },
       {
         "attr": "myCalendar",
+        "visible": false,
+        "enabled": false
+      },
+      {
+        "attr": "groupCoworkings",
+        "visible": false,
+        "enabled": false
+      },
+      {
+        "attr": "groupEvents",
         "visible": false,
         "enabled": false
       }
@@ -88,31 +98,31 @@
         "enabled": false
       },
       {
-        "permissionId":"MyEvents",
+        "permissionId": "MyEvents",
         "enabled": false
       },
       {
-        "permissionId":"Bookings",
+        "permissionId": "Bookings",
         "enabled": false
       },
       {
-        "permissionId":"profile",
-        "enabled":false
-      },
-      {
-        "permissionId":"account",
-        "enabled":false
-      },
-      {
-        "permissionId":"appearance",
-        "enabled":false
-      },
-      {
-        "permissionId":"myCalendar",
+        "permissionId": "profile",
         "enabled": false
       },
       {
-        "permissionId":"analytics-occupation",
+        "permissionId": "account",
+        "enabled": false
+      },
+      {
+        "permissionId": "appearance",
+        "enabled": false
+      },
+      {
+        "permissionId": "myCalendar",
+        "enabled": false
+      },
+      {
+        "permissionId": "analytics-occupation",
         "enabled": false
       }
     ]

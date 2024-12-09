@@ -236,6 +236,8 @@
   "SURE_DELETE": "Are you sure you want to delete the coworking ",
   "COWORKING_DELETED": "Coworking deleted",
   "PENDING_BOOKINGS": "You can't remove this coworking, it has pending bookings",
+  "GROUP_COWORKINGS": "Manage coworkings",
+  "GROUP_EVENTS": "Manage events",
   "NO_RESULTS": "No results found",
   "EVENT_CREATE": "Event created!",
   "DATERANGE_SELECTION_ERROR": "You must select a date range.",
