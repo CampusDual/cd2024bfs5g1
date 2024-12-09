@@ -238,7 +238,6 @@
   "PENDING_BOOKINGS": "You can't remove this coworking, it has pending bookings",
   "NO_RESULTS": "No results found",
   "EVENT_CREATE": "Event created!",
-  "DATERANGE_SELECTION_ERROR": "You must select a date range.",
   "SEARCH": "Search address",
   "INVALID_LOCATION_CONFIRM": "Save invalid address?",
   "CONFIRM": "Confirm address"
